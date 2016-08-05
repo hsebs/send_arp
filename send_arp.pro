@@ -4,10 +4,10 @@ TARGET = send_arp
 
 TEMPLATE = app
 CONFIG += console c++11
-CONFIG -= app_bundle
-CONFIG -= qt
 
-SOURCES += main.cpp
+
+SOURCES += main.cpp \
+    thread.cpp
 
 unix{
     LIBS += -L/path/libpcap
@@ -39,5 +39,6 @@ HEADERS += \
     libnet/libnet-macros.h \
     libnet/libnet-structures.h \
     libnet/libnet-types.h \
-    packetmanager.h
+    packetmanager.h \
+    thread.h
 
